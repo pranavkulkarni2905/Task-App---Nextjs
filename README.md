@@ -5,13 +5,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+clone the repo
+cd  task-manager
+create .env.local file
+MONGODB_URI=ur-mongo-uri
+JWT_SECRET=ur-secret
+NEXTAUTH_SECRET=ur-secret
+
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
