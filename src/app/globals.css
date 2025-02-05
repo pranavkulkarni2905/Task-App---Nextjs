@@ -19,3 +19,35 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Add this in your global CSS or Tailwind config */
+input, textarea {
+  color: #333; /* Set text color to black */
+  background-color: #f9fafb; /* Light background */
+  border: 1px solid #d1d5db; /* Border color */
+  padding: 0.8rem; /* Spacing inside input */
+  border-radius: 0.375rem; /* Rounded corners */
+  transition: all 0.2s ease; /* Smooth transitions */
+}
+
+input:focus, textarea:focus {
+  border-color: #4b6bfb; /* Highlight border on focus */
+  outline: none;
+  background-color: #ffffff; /* White background when focused */
+}
+
+button {
+  background-color: #4b6bfb; /* Blue background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #3754a3; /* Darker blue on hover */
+}
+
+
