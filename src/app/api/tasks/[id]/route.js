@@ -24,7 +24,7 @@ export async function PUT(req, { params }) {
 
         return new Response(JSON.stringify(updatedTask), { status: 200 });
     } catch (error) {
-        return new Response(JSON.stringify({ message: "Server error" }), { status: 500 });
+        return new Response(JSON.stringify({ message: "Server error",error }), { status: 500 });
     }
 }
 
@@ -44,7 +44,7 @@ export async function DELETE(req, { params }) {
 
         return new Response(JSON.stringify({ message: "Task deleted successfully" }), { status: 200 });
     } catch (error) {
-        return new Response(JSON.stringify({ message: "Server error" }), { status: 500 });
+        return new Response(JSON.stringify({ message: "Server error",error }), { status: 500 });
     }
 }
 

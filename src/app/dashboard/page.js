@@ -98,26 +98,26 @@ export default function Dashboard() {
         }
     }
 
-    async function handleEditTask(taskId, updatedTitle, updatedDescription) {
-        const token = localStorage.getItem("token");
-        if (!token) return router.push("/login");
+    // async function handleEditTask(taskId, updatedTitle, updatedDescription) {
+    //     const token = localStorage.getItem("token");
+    //     if (!token) return router.push("/login");
     
-        const res = await fetch(`/api/tasks/${taskId}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`,
-            },
-            body: JSON.stringify({
-                title: updatedTitle,
-                description: updatedDescription,
-            }),
-        });
+    //     const res = await fetch(`/api/tasks/${taskId}`, {
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             "Authorization": `Bearer ${token}`,
+    //         },
+    //         body: JSON.stringify({
+    //             title: updatedTitle,
+    //             description: updatedDescription,
+    //         }),
+    //     });
     
-        if (res.ok) {
-            setTasks(tasks.map(task => task._id === taskId ? { ...task, title: updatedTitle, description: updatedDescription } : task));
-        }
-    }
+    //     if (res.ok) {
+    //         setTasks(tasks.map(task => task._id === taskId ? { ...task, title: updatedTitle, description: updatedDescription } : task));
+    //     }
+    // }
     
 
     return (

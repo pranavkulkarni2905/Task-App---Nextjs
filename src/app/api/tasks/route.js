@@ -21,7 +21,7 @@ export async function POST(req) {
 
         return new Response(JSON.stringify(newTask), { status: 201 });
     } catch (error) {
-        return new Response(JSON.stringify({ message: "Server error" }), { status: 500 });
+        return new Response(JSON.stringify({ message: "Server error",error }), { status: 500 });
     }
 }
 
@@ -37,7 +37,7 @@ export async function GET(req) {
 
         return new Response(JSON.stringify(tasks), { status: 200 });
     } catch (error) {
-        return new Response(JSON.stringify({ message: "Server error" }), { status: 500 });
+        return new Response(JSON.stringify({ message: "Server error",error }), { status: 500 });
     }
 }
 

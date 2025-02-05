@@ -12,6 +12,6 @@ export function verifyToken(req) {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         return { userId: decoded.id };
     } catch (error) {
-        return { error: "Invalid or expired token." };
+        return { error: "Invalid or expired token.",error };
     }
 }

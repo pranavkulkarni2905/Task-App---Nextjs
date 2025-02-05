@@ -17,10 +17,10 @@ export async function POST(req) {
        const hashedPassword = await bcrypt.hash(password, 10);
 
        // Create user
-       const newUser = await User.create({ username, email, password: hashedPassword });
+        await User.create({ username, email, password: hashedPassword });
 
        return new Response(JSON.stringify({ message: "User registered successfully" }), { status: 201 });
    } catch (error) {
-       return new Response(JSON.stringify({ message: "Server error" }), { status: 500 });
+       return new Response(JSON.stringify({ message: "Server error",error }), { status: 500 });
    }
 }
